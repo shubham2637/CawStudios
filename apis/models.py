@@ -75,7 +75,7 @@ class Booking(models.Model):
     status = models.CharField( max_length=10 )
 
     def __str__(self):
-        return f"{self.id} {self.user.username} {self.ticket.show.cinema.name} {self.ticket.show.start_time} INR{self.ticket.price} "
+        return f"{self.id} {self.user.username} {self.moviedetails.movie.Title} {self.ticket.show.start_time} INR{self.ticket.price} "
 
 
 class Payment(models.Model):
@@ -84,4 +84,4 @@ class Payment(models.Model):
     amount = models.DecimalField( decimal_places=2, max_digits=8 )
 
     def __str__(self):
-        return f"{self.id} {self.booking.ticket.show.name} {self.amount} {self.timestamp}"
+        return f"{self.id} {self.booking.moviedetails.movie.Title} {self.amount} {self.timestamp}"
