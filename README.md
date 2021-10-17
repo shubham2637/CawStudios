@@ -27,6 +27,7 @@ To get up and running, simply do the following:
                 password : admin
     
 
+
     #for Rest APIs
     use the postman collection for API details
     https://www.getpostman.com/collections/b9889168b7a1b1a70fe7
