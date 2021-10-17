@@ -3,7 +3,7 @@ from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from apis.models import Movie, City
+from apis.models import Movie, City, Show, Cinema
 
 
 class RegisterSerializer( serializers.ModelSerializer ):
@@ -42,12 +42,24 @@ class RegisterSerializer( serializers.ModelSerializer ):
 
         return user
 
-class MovieSerializer(serializers.ModelSerializer):
+
+class MovieSerializer( serializers.ModelSerializer ):
     class Meta:
         model = Movie
         fields = '__all__'
 
-class CitySerializer(serializers.ModelSerializer):
+
+class CitySerializer( serializers.ModelSerializer ):
     class Meta:
         model = City
+        fields = '__all__'
+
+class ShowSerializer( serializers.ModelSerializer ):
+    class Meta:
+        model = Show
+        fields = '__all__'
+
+class CinemaSerializer( serializers.ModelSerializer ):
+    class Meta:
+        model = Cinema
         fields = '__all__'
