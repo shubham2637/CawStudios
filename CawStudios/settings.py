@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'apis',
     'rest_framework_swagger',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
