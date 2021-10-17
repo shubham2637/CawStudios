@@ -1,0 +1,480 @@
+2021-10-17 09:35:20,672 - django.request - Thread-1 -  WARNING - Bad Request: /api/movieByCity/jamshedpu
+2021-10-17 09:40:08,482 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 09:40:08,489 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 09:40:13,568 - root - Thread-1 -  ERROR - log() missing 1 required positional argument: 'level'
+
+KeyError: "Got KeyError when attempting to get a value for field `Title` on serializer `MovieSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'Title'."
+2021-10-17 09:57:50,385 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:02:00,902 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:15:26,286 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
+2021-10-17 10:15:26,300 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:15:43,664 - django.request - Thread-1 -  WARNING - Not Found: /api/cinemaByShowtime/12:00:00
+2021-10-17 10:16:34,803 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:16:34,804 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:16:41,477 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
+2021-10-17 10:16:41,482 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:17:02,498 - django.request - Thread-3 -  WARNING - Not Found: /api/cinemaByShowtime
+2021-10-17 10:17:26,504 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
+2021-10-17 10:17:26,507 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:17:29,343 - root - Thread-1 -  ERROR - 'cinemaByShowtime'
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'cinemaByShowtime'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 97, in cinemaByShowtime
+    showtime = request.POST['cinemaByShowtime']
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'cinemaByShowtime'
+2021-10-17 10:17:29,379 - django.request - Thread-1 -  ERROR - Internal Server Error: /api/cinemaByShowtime
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+2021-10-17 10:17:49,605 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:17:49,608 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:17:52,053 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:17:52,059 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:18:06,465 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:18:06,466 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:18:07,610 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:18:07,611 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:27:33,341 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:27:33,342 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:28:10,217 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:28:10,219 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:28:11,087 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:28:11,089 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:28:16,962 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:28:16,963 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:28:51,519 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:28:51,523 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:28:56,637 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 98, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:28:56,646 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:29:29,144 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:29:29,146 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:29:33,887 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 99, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:29:33,898 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:29:40,799 - root - Thread-1 -  ERROR - expected string or bytes-like object
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 99, in cinemaByShowtime
+    shows = Show.objects.filter(start_time=cinemaByShowtime).values('cinema')
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1367, in to_python
+    parsed = parse_datetime(value)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/utils/dateparse.py", line 107, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+2021-10-17 10:29:40,799 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:29:57,531 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:29:57,532 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:30:00,350 - django.request - Thread-1 -  ERROR - Internal Server Error: /api/cinemaByShowtime
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ListSerializer is not JSON serializable
+2021-10-17 10:31:51,944 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:31:51,947 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:32:39,559 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:32:39,561 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:32:43,664 - root - Thread-1 -  ERROR - Invalid Showtime
+NoneType: None
+2021-10-17 10:32:43,665 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:33:03,670 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:33:03,672 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:33:08,228 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 10:33:08,230 - asyncio - MainThread -  DEBUG - Using selector: KqueueSelector
+2021-10-17 10:33:11,480 - root - Thread-1 -  ERROR - {'res': 'Invalid Showtime'}
+NoneType: None
+2021-10-17 10:33:11,481 - django.request - Thread-1 -  WARNING - Bad Request: /api/cinemaByShowtime
+2021-10-17 10:33:16,311 - root - Thread-1 -  ERROR - ["“'12:00:00+00:00'” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."]
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/apis/views.py", line 99, in cinemaByShowtime
+
+2021-10-17 14:54:58,010 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 14:55:01,549 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 14:56:16,822 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 14:57:29,242 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 14:57:55,440 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:11:18,197 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:11:55,704 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:12:35,985 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:13:02,107 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:15:07,684 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:21:12,821 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:21:33,779 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
+2021-10-17 15:21:54,622 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:24:02,186 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:24:09,703 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:24:38,631 - django.request - Thread-1 -  WARNING - Not Found: /api/bookticket/
+2021-10-17 15:24:58,179 - django.request - Thread-1 -  WARNING - Not Found: /api/bookticket/
+2021-10-17 15:25:09,073 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:25:15,840 - django.request - Thread-1 -  WARNING - Not Found: /api/bookticket/
+2021-10-17 15:25:23,600 - django.request - Thread-1 -  WARNING - Unauthorized: /api/bookticket
+2021-10-17 15:25:49,987 - django.request - Thread-1 -  WARNING - Bad Request: /api/bookticket
+2021-10-17 15:28:00,536 - django.request - Thread-6 -  WARNING - Bad Request: /api/bookticket
+2021-10-17 15:28:39,427 - django.request - Thread-6 -  WARNING - Bad Request: /api/bookticket
+2021-10-17 15:28:42,847 - django.request - Thread-6 -  WARNING - Not Found: /api/bookticket/
+2021-10-17 15:29:51,488 - django.request - Thread-6 -  WARNING - Not Found: /api/bookticket/
+2021-10-17 15:30:18,664 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
+2021-10-17 15:30:22,607 - django.request - Thread-6 -  WARNING - Bad Request: /api/bookticket/
+2021-10-17 15:30:36,998 - django.request - Thread-6 -  WARNING - Unauthorized: /api/bookticket/
+2021-10-17 15:31:09,619 - django.request - Thread-6 -  WARNING - Bad Request: /api/bookticket/
+2021-10-17 15:31:52,716 - django.request - Thread-6 -  WARNING - Bad Request: /api/bookticket/
+2021-10-17 15:32:23,242 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:33:45,297 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:34:46,312 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:34:49,912 - django.request - Thread-1 -  WARNING - Not Found: /api/bookticket/
+2021-10-17 15:35:00,220 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:35:12,059 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:35:36,086 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:42:28,043 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:44:02,336 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:44:08,082 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:45:34,442 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:45:44,093 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:45:53,759 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:45:59,642 - django.request - Thread-1 -  WARNING - Unauthorized: /api/bookticket/
+2021-10-17 15:47:50,441 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
+2021-10-17 15:47:53,888 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
