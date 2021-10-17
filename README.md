@@ -20,6 +20,7 @@ To get up and running, simply do the following:
     $ python manage.py runserver
     
     #Deployed on Heroku
+    for testing
     Open bowser at https://cawstudio.herokuapp.com/
     Admin Login : https://cawstudio.herokuapp.com/admin
                 username : admin 
