@@ -21,14 +21,6 @@ logging.basicConfig( filename='api.log',
                      format='%(asctime)s - %(name)s - %(threadName)s -  %(levelname)s - %(message)s' )
 
 
-class BookTicket( APIView ):
-    permission_classes = (IsAuthenticated,)
-
-    def get(self, request):
-        content = {'message': 'Hello, World!'}
-        return Response( content )
-
-
 class RegisterView( generics.CreateAPIView ):
     queryset = User.objects.all()
     permission_classes = (AllowAny,)

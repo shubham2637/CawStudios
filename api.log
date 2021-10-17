@@ -478,3 +478,75 @@ Traceback (most recent call last):
 2021-10-17 15:45:59,642 - django.request - Thread-1 -  WARNING - Unauthorized: /api/bookticket/
 2021-10-17 15:47:50,441 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/views.py changed, reloading.
 2021-10-17 15:47:53,888 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/apis/urls.py changed, reloading.
+2021-10-17 16:03:27,361 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/urls.py changed, reloading.
+2021-10-17 16:12:01,344 - django.request - Thread-1 -  WARNING - Not Found: /
+2021-10-17 16:12:06,987 - django.request - Thread-1 -  ERROR - Internal Server Error: /api-docs/
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/drf_yasg2/renderers.py", line 83, in render
+    return render_to_string(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf_yasg2/swagger-ui.html
+2021-10-17 16:13:34,628 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:14:27,808 - django.request - Thread-1 -  ERROR - Internal Server Error: /api-docs/
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/drf_yasg2/renderers.py", line 83, in render
+    return render_to_string(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf_yasg2/swagger-ui.html
+2021-10-17 16:14:28,862 - django.request - Thread-1 -  ERROR - Internal Server Error: /api-docs/
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/drf_yasg2/renderers.py", line 83, in render
+    return render_to_string(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf_yasg2/swagger-ui.html
+2021-10-17 16:14:29,668 - django.request - Thread-1 -  ERROR - Internal Server Error: /api-docs/
+Traceback (most recent call last):
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/drf_yasg2/renderers.py", line 83, in render
+    return render_to_string(
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/shubhamsingh/envdevs/CawStudios/venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf_yasg2/swagger-ui.html
+2021-10-17 16:23:09,633 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/urls.py changed, reloading.
