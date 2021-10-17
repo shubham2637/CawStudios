@@ -12,7 +12,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from apis.models import Movie, City, Show, MovieTheatreShow, Ticket, Booking, Payment
+from apis.models import Movie, City, Show, MovieCinemaShow, Ticket, Booking, Payment
 from apis.serializers import RegisterSerializer, CitySerializer, ShowSerializer, CinemaSerializer, MovieSerializer, \
     BookingSerializer
 
@@ -42,7 +42,7 @@ def movie_by_city(request):
             httpStatus = status.HTTP_400_BAD_REQUEST
             return Response( message, status=httpStatus )
         try:
-            movie_details = MovieTheatreShow.objects.filter( cinema__address__city=city ).prefetch_related( 'movie' )
+            movie_details = MovieCinemaShow.objects.filter( cinema__address__city=city ).prefetch_related( 'movie' )
             movie_detailsList = []
             if movie_details:
                 for movie_detailsObj in movie_details:
@@ -68,7 +68,7 @@ def cinemaByShowtime(request):
             httpStatus = status.HTTP_400_BAD_REQUEST
             return Response( message, status=httpStatus )
         try:
-            movie_details = MovieTheatreShow.objects.filter( show__name=showtime ).values( 'movie__Title', 'show__name',
+            movie_details = MovieCinemaShow.objects.filter( show__name=showtime ).values( 'movie__Title', 'show__name',
                                                                                            'show__available_seats' )
         except Exception as e:
             message = str( e )
@@ -119,7 +119,7 @@ def bookticket(request):
             return Response( message, status=httpStatus )
         try:
             ticket = Ticket.objects.get( pk=ticket_id )
-            moviedetails = MovieTheatreShow.objects.get( pk=Moviedetails_id )
+            moviedetails = MovieCinemaShow.objects.get( pk=Moviedetails_id )
             booking = Booking( user=user, ticket=ticket, moviedetails=moviedetails, status='INITIATED' )
             booking.save()
             #Saved Booking info

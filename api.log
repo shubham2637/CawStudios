@@ -550,3 +550,16 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: drf_yasg2/swagger-ui.html
 2021-10-17 16:23:09,633 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/urls.py changed, reloading.
+2021-10-17 16:28:46,251 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:29:30,899 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:29:31,682 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:29:47,016 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:29:47,456 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:30:40,653 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:30:40,941 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:30:49,421 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:30:49,751 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:31:28,247 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:31:28,629 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:33:38,307 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
+2021-10-17 16:33:38,391 - django.utils.autoreload - MainThread -  INFO - /Users/shubhamsingh/envdevs/CawStudios/CawStudios/settings.py changed, reloading.
