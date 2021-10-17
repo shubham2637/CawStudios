@@ -58,7 +58,7 @@ class Ticket(models.Model):
     def __str__(self):
         return f"{self.id} {self.price} {self.show.name} {self.category} "
 
-class MovieTheatreShow(models.Model):
+class MovieCinemaShow( models.Model ):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     cinema = models.ForeignKey(Cinema, on_delete=models.CASCADE)
     show = models.ForeignKey(Show, on_delete=models.CASCADE)
@@ -70,7 +70,7 @@ class MovieTheatreShow(models.Model):
 class Booking(models.Model):
     user = models.ForeignKey( User, on_delete=models.CASCADE )
     ticket = models.ForeignKey( Ticket, on_delete=models.CASCADE )
-    moviedetails = models.ForeignKey( MovieTheatreShow, on_delete=models.CASCADE )
+    moviedetails = models.ForeignKey( MovieCinemaShow, on_delete=models.CASCADE )
     timestamp = models.DateTimeField( auto_now_add=True )
     status = models.CharField( max_length=10 )
 

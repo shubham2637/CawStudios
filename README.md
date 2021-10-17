@@ -4,7 +4,7 @@ Getting Started
 To get up and running, simply do the following:
 
     $ git clone git@github.com:shubham2637/CawStudios.git
-    $ cd vymo
+    $ cd CawStudios
 
     # Install the requirements
     $ pip install -r requirements.txt
@@ -18,8 +18,9 @@ To get up and running, simply do the following:
     # Start the server
     $ python manage.py runserver
     
-    Open bowser at http://127.0.0.1:8000
-    Admin Login : http://127.0.0.1:8000/admin
+    #Deployed on Heroku
+    Open bowser at https://cawstudio.herokuapp.com/
+    Admin Login : https://cawstudio.herokuapp.com/admin
                 username : admin 
                 password : admin
     
