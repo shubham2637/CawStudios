@@ -1,18 +1,17 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework import routers
 
-from .views import RegisterView, BookTicket, MovieView, CityView, movieByCity, cinemaByShowtime, bookticket, \
-    seatsByShowtime
+from .views import RegisterView, BookTicket, CityView, cinemaByShowtime, bookticket, \
+    seatsByShowtime, movie_by_city
 
 router = routers.DefaultRouter()
 router.register(r'city', CityView)
-router.register(r'movie', MovieView)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('book/<city_name>/<movie_name>/<theatre_name>/<show_name>', bookticket, name="bookticket"),
+    re_path('bookticket', bookticket, name="bookticket"),
     #path('movie/', MovieView.as_view(), name='movie'),
-    path('movieByCity/<slug:city>', movieByCity, name='movieByCity'),
+    path('movieByCity', movie_by_city, name='movieByCity'),
     path('cinemaByShowtime', cinemaByShowtime, name='cinemaByShowtime'),
     path('seatsByShowtime', seatsByShowtime, name='seatsByShowtime'),
     #path('city/', CityView.as_view(), name='city'),

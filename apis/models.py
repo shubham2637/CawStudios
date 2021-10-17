@@ -37,7 +37,7 @@ class Movie(models.Model):
 
 class Show(models.Model):
     name = models.CharField( max_length=20, unique=True )
-    date = models.DateField( auto_now=True )
+    timestamp = models.DateTimeField( auto_now_add=True )
     start_time = models.TimeField( default='09:00', blank=False )
     end_time = models.TimeField( default='11:00', blank=False )
     total_seats = models.IntegerField( default=20 )
@@ -82,6 +82,7 @@ class Payment(models.Model):
     booking = models.ForeignKey( Booking, on_delete=models.CASCADE )
     timestamp = models.DateTimeField( auto_now_add=True )
     amount = models.DecimalField( decimal_places=2, max_digits=8 )
+    mode_of_payment = models.CharField( max_length=10 , default='CASH')
 
     def __str__(self):
         return f"{self.id} {self.booking.moviedetails.movie.Title} {self.amount} {self.timestamp}"
